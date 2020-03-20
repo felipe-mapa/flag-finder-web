@@ -1,24 +1,68 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect, useCallback } from 'react';
+import { BrowserRouter, Route } from "react-router-dom";
+import { useDispatch } from 'react-redux';
+import * as countriesActions from './store/actions/countriesAction';
+import {isMobile} from 'react-device-detect';
 
-function App() {
+import SearchContainer from './routes/SearchContainer'
+import CountryPage from './routes/CountryPage'
+import DownloadAndroid from './partials/DownloadApp'
+
+const App = () => {
+
+  // DISPATCH
+  const dispatch = useDispatch();
+
+  // LOAD COUNTRIES
+  useEffect(() => {
+    loadCountries()
+  }, [])
+  // LOAD ALL COUNTRIES TOGETHER
+  const loadCountries = useCallback(async () => {
+    try {
+      await dispatch(countriesActions.fetchCountries());
+    } catch (err) {
+      throw err
+    }
+  }, []);
+
+  // LOAD TAGS
+  useEffect(() => {
+    loadTags()
+  }, [])
+  const loadTags = useCallback(async () => {
+    try {
+      await dispatch(countriesActions.fetchTags());
+    } catch (err) {
+      throw err
+    }
+  }, [dispatch]);
+
+  // LOAD CONTINENTS
+  useEffect(() => {
+    loadContinents()
+  }, [])
+  const loadContinents = useCallback(async () => {
+    try {
+      await dispatch(countriesActions.fetchContinents());
+    } catch (err) {
+      throw err
+    }
+  }, [dispatch]);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>react-src/src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+        {
+          isMobile ? 
+          <DownloadAndroid />
+          : null
+        }
+      <BrowserRouter>
+        <Route path="/test/" exact component={SearchContainer} />
+        <Route path="/test/country/:id" exact component={CountryPage} />
+        {/* <Route path="/" exact component={SearchContainer} />
+        <Route path="/country/:id" exact component={CountryPage} /> */}
+      </BrowserRouter>
     </div>
   );
 }

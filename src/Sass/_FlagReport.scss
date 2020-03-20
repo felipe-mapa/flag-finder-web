@@ -1,0 +1,74 @@
+.FlagReport {
+    width: 100%;
+    height: 100%;
+    visibility: 1;
+    opacity: 1;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__hidden {
+        visibility: 0;
+        opacity: 0;
+    }
+
+    &__header {
+        text-align: center;
+
+        @media only screen and (max-width: 360px) {
+            font-size: 2rem;
+        }
+    }
+
+    &__backdrop {
+        background-color: rgba(0, 0, 0, 0.432);
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+
+    &__container {
+        background-color: white;
+        margin: 0 auto;
+        z-index: 101;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 101%;
+        height: 101%;
+        padding: 20px;
+        background-color: white;
+        
+        @media only screen and (min-width: 600px) {
+            max-width: 500px;
+            max-height: 550px;
+            height: auto;
+            padding: 30px;
+
+        }
+
+        &--animation {    
+            &-enter {
+                opacity: 0;
+                transform: scale(0.2) translate(0, 0);
+            }
+            &-enter-active {
+                opacity: 1;
+                transform: scale(1) translate(-50%, -50%);
+                transition: opacity 500ms, transform 500ms;
+            }
+            &-exit {
+                opacity: 1;
+            }
+            &-exit-active {
+                opacity: 0;
+                transform: scale(0.2) translate(0, 0);
+                transition: opacity 500ms, transform 500ms;
+            }
+        }
+
+    }
+}

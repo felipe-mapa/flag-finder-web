@@ -1,31 +1,60 @@
 {
-  "name": "react-src",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@devloco/react-scripts-wptheme": "3.1.201",
-    "react": "^16.10.2",
-    "react-dom": "^16.10.2"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
-  }
+    "name": "flag-finder-theme",
+    "version": "1.0.0",
+    "private": true,
+    "dependencies": {
+        "@devloco/react-scripts-wptheme": "3.1.201",
+        "@fortawesome/fontawesome-svg-core": "^1.2.27",
+        "@fortawesome/free-solid-svg-icons": "^5.12.1",
+        "@fortawesome/react-fontawesome": "^0.1.9",
+        "axios": "^0.19.0",
+        "bootstrap": "^4.3.1",
+        "emailjs-com": "^2.4.0",
+        "express": "^4.17.1",
+        "google-maps-react": "^2.0.2",
+        "node-sass": "^4.13.1",
+        "nodemailer": "^6.3.0",
+        "react": "^16.10.2",
+        "react-adsense": "^0.1.0",
+        "react-device-detect": "^1.11.14",
+        "react-dom": "^16.10.2",
+        "react-helmet": "^5.2.1",
+        "react-redux": "^7.2.0",
+        "react-router-dom": "^5.1.2",
+        "react-transition-group": "^4.3.0",
+        "reactstrap": "^8.0.1",
+        "redux": "^4.0.5",
+        "redux-thunk": "^2.3.0",
+        "sass": "^1.23.0"
+    },
+    "scripts": {
+        "build-css": "node-sass --include-path ./src --include-path ./node_modules src/ -o src/",
+        "watch-css": "npm run build-css && node-sass --include-path ./src --include-path ./node_modules src/ -o src/ --watch --recursive",
+        "crabuild": "react-scripts build",
+        "craeject": "react-scripts eject",
+        "crastart": "react-scripts start",
+        "cratest": "react-scripts test",
+        "build": "npm run build-css && wptheme-scripts build",
+        "start": "wptheme-scripts start",
+        "wpbuild": "wptheme-scripts wpbuild",
+        "wpstart": "wptheme-scripts wpstart"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    },
+    "browserslist": {
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all"
+        ],
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ]
+    },
+    "homepage": "http://felipepavanela78601.ipage.com/test/wp-content/themes/flag-finder-theme",
+    "browserLaunchTo": "http://flag-with-wordpress.local/",
+    "proxy": "http://flag-with-wordpress.local/"
 }

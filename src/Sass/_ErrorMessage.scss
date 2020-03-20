@@ -1,0 +1,83 @@
+.errorMessage {
+  width: 100%;
+  background-color: rgba(255, 0, 0, .6);
+  color: black;
+  border-radius: 5px 5px 0 0;
+  z-index: 1;
+  height: 0;
+  box-sizing: border-box;
+  padding: 5px 15px 15px 15px;
+  border: none;
+  position: relative;
+  top: 15px;
+  opacity: 0;
+
+  @media only screen and (max-width: 400px) {
+    padding-top: 4px;
+  }
+
+  @media only screen and (max-width: 330px) {
+    font-size: 13px;
+  }
+  
+  &__fade-slide{
+    opacity: 1;
+    height: 45px;
+
+    @media only screen and (max-width: 400px) {
+      height: 40px;
+    }
+
+    &-enter-done {
+      opacity: 1;
+      height: 45px;
+
+      @media only screen and (max-width: 400px) {
+        height: 40px;
+      }
+    }
+
+    &-enter-active {
+      animation: openErrorMessage 300ms ease-out;
+    }
+
+    &-exit-done {
+      opacity: 0;
+      height: 0;
+    }
+    
+    &-exit-active {
+      animation: closeErrorMessage 500ms ease-out;
+    }
+  }
+}
+
+@keyframes openErrorMessage {
+  0% {
+    opacity: 0;
+    height: 0;
+  }
+  100% {
+    opacity: 1;
+    height: 45px;
+
+    @media only screen and (max-width: 400px) {
+      height: 40px;
+    }
+  }
+}
+
+@keyframes closeErrorMessage {
+  0% {
+    opacity: 1;
+    height: 45px;
+
+    @media only screen and (max-width: 400px) {
+      height: 40px;
+    }
+  }
+  100% {
+    opacity: 0;
+    height: 0;
+  }
+}
