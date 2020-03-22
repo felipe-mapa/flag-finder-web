@@ -58,10 +58,8 @@ const App = () => {
           : null
         }
       <BrowserRouter>
-        <Route path="/test/" exact component={SearchContainer} />
-        <Route path="/test/country/:id" exact component={CountryPage} />
-        {/* <Route path="/" exact component={SearchContainer} />
-        <Route path="/country/:id" exact component={CountryPage} /> */}
+        <Route path="/" exact component={SearchContainer} />
+        <Route path="/country/:id" exact component={CountryPage} />
       </BrowserRouter>
     </div>
   );

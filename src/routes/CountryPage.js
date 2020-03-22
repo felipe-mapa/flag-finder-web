@@ -195,8 +195,7 @@ const CountryPage = (props) => {
 
     return (
         <div>
-            <Link to={"/test/"} className="countryPage__back">
-            {/* CHANGE <Link to={"/"} className="countryPage__back"> */}
+            <Link to={"/"} className="countryPage__back">
                 <h3 className="countryPage__back--h3"
                     style={{ backgroundImage: "linear-gradient(to right, black, blue, black)" }}
                 >

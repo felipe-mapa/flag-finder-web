@@ -50,8 +50,7 @@ const Countries = () => {
                 }}
             >
                 <li className="countries__country">
-                    {/* CHANGE <Link to={"/country/" + country.slug}> */}
-                    <Link to={"/test/country/" + country.slug}>
+                    <Link to={"/country/" + country.slug}>
                         <img src={country.flag} alt={country.name + " Flag"} />
                         <p id="fit">{country.name}</p>
                     </Link>
@@ -90,8 +89,7 @@ const Countries = () => {
         if (filteredCountries.length === 1) {
             filteredCountries.map(country =>
                 output = (
-                    <Link to={"/test/country/" + country.slug}>
-                    {/* CHANGE <Link to={"/country/" + country.slug}> */}
+                    <Link to={"/country/" + country.slug}>
                         <div className="countries__unique">
                             <img className="countries__unique--img" src={country.flag} alt={country.name + " Flag - flagfinder.com"} />
                             <p><strong>{country.name}</strong></p>
