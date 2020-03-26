@@ -1,26 +1,12 @@
 ## BEFORE DEPLOY
 1 - package.json -> "homepage": "http://flagfinderapp.com/wp-content/themes/flag-finder-theme"
-<!-- 2 - App.js -> 
-    <Route path="/test/" exact component={SearchContainer} />
-    <Route path="/test/country/:id" component={CountryPage} />  -->
 
-<!-- 3 - CountryPage.js -> Switch commented line with other line (1 line in total)
-
-4 - Country.js -> Switch commented line with other line (2 lines in total) -->
-
-5 - countryAction.js -> Switch commented line with other line (9 lines)
+2 - countryAction.js -> Switch commented line with other line (9 lines)
 
 ## BEFORE EDIT
 1 - package.json-> "homepage": "/wp-content/themes/flag-finder-theme/"
-<!-- 2 - App.js ->
-        <Route path="/" exact component={SearchContainer} />
-        <Route path="/country/:id" exact component={CountryPage} /> -->
 
-<!-- 3 - CountryPage.js -> Switch commented line with other line (1 line in total)
-
-4 - Country.js -> Switch commented line with other line (2 lines in total) -->
-
-5 - countryAction.js -> Switch commented line with other line (9 lines)
+2 - countryAction.js -> Switch commented line with other line (9 lines)
 
 ## To Have SASS  watch working need to run in a different tab watch-css
 ###############################################################################
