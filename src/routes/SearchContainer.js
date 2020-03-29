@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import * as countriesActions from '../store/actions/countriesAction';
 import { Helmet } from 'react-helmet'
+import AdSense from 'react-adsense';
 
 import InputTag from '../partials/searchComponent/inputTag'
 import ListTags from '../partials/searchComponent/tagList'
@@ -171,6 +172,12 @@ const SearchComponent = () => {
                         />
                         <ListTags tags={tagsFilter} removeTag={id => removeTag(id)} />
                     </div>
+                    {/* <AdSense.Google
+                        client='pub-7939975839235598'
+                        slot='7806394673'
+                        style={{ width: 500, height: 300, float: 'left' }}
+                        format=''
+                    /> */}
                     <Countries tags={tagsFilter} countries={countries} />
                 </div>
             </div>

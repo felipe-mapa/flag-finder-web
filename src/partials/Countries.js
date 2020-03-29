@@ -9,7 +9,7 @@ import Footer from '../partials/Footer'
 
 const Countries = () => {
     const [filteredCountries, setFilteredCountries] = useState([])
-    const [isLoading, setIsLoading] = useState(true) 
+    const [isLoading, setIsLoading] = useState(true)
     const [titleHeading, setTitleHeading] = useState("Loading")
 
     const countries = useSelector(state => state.loadedCountries);
