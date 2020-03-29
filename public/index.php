@@ -25,14 +25,9 @@
     <link rel="manifest" href="<?php echo $TEMPLATE_PATH; ?>/manifest.json">
     <title>Flag Finder App</title>
 
-    <!-- GOOGLE -->
-    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-7485080953225971",
-        enable_page_level_ads: true
-      });
-    </script>
+    <!-- GOOGLE ADS-->
+    <script data-ad-client="ca-pub-7939975839235598" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@2.3.2/dist/email.min.js"></script>
   <script type="text/javascript">
     (function () {
