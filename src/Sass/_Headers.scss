@@ -7,22 +7,19 @@
     font-weight: 700;
     display: inline-block;
     color: $color-primary;
-    // background: linear-gradient(to bottom, #02aab0, #0D006C);
-    // -webkit-background-clip: text;
-    // -webkit-text-fill-color: transparent;
     letter-spacing: .2rem;
     transition: all .2s;
     margin: 0;
 
     @media only screen and (max-width: 500px) {
-        font-size: 40px;
+        font-size: 45px;
     }
 
     @media only screen and (max-width: 465px) {
-        font-size: 35px;
+        font-size: 40px;
     }
 
     @media only screen and (max-width: 360px) {
-        font-size: 25px;
+        font-size: 30px;
     }
 }

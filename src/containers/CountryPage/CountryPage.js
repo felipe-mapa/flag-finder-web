@@ -1,14 +1,14 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as countriesActions from '../store/actions/countriesAction';
+import * as countriesActions from '../../store/actions/countriesAction';
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faQuestionCircle } from '@fortawesome/free-solid-svg-icons'
 import { Helmet } from 'react-helmet'
 
-import Spinner from '../partials/Spinner'
-import ReportButton from '../partials/FlagReport/ReportButton'
-import Footer from '../partials/Footer'
+import Spinner from '../../components/Spinner/Spinner'
+import ReportButton from '../../components/ReportButton/ReportButton'
+import Footer from '../../components/Footer/Footer'
 
 const CountryPage = (props) => {
     let flagCapital = null

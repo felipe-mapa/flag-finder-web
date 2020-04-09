@@ -4,9 +4,9 @@ import { useDispatch } from 'react-redux';
 import * as countriesActions from './store/actions/countriesAction';
 import {isMobile} from 'react-device-detect';
 
-import SearchContainer from './routes/SearchContainer'
-import CountryPage from './routes/CountryPage'
-import DownloadAndroid from './partials/DownloadApp'
+import SearchContainer from './containers/SearchContainer/SearchContainer'
+import CountryPage from './containers/CountryPage/CountryPage'
+import DownloadAndroid from './components/DownloadApp/DownloadApp'
 
 const App = () => {
 

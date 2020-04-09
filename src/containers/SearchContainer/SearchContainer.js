@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import * as countriesActions from '../store/actions/countriesAction';
+import * as countriesActions from '../../store/actions/countriesAction';
 import { Helmet } from 'react-helmet'
-import AdSense from 'react-adsense';
 
-import InputTag from '../partials/searchComponent/inputTag'
-import ListTags from '../partials/searchComponent/tagList'
-import Countries from '../partials/Countries'
-import ReportButton from '../partials/FlagReport/ReportButton'
+import InputTag from '../../components/InputTag/InputTag'
+import ListTags from '../../components/TagList/TagList'
+import Countries from '../Countries/Countries'
+import ReportButton from '../../components/ReportButton/ReportButton'
 
-import FlagFinderHeader from '../assets/images/flagFinder.png'
+import FlagFinderHeader from '../../assets/images/flagFinder.png'
 
 const SearchComponent = () => {
     const [newTag, setNewTag] = useState('')

@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 import TransitionGroup from 'react-transition-group/TransitionGroup'
 import CSSTransition from 'react-transition-group/CSSTransition'
-import Spinner from './Spinner'
-import Footer from '../partials/Footer'
+import Spinner from '../../components/Spinner/Spinner'
+import Footer from '../../components/Footer/Footer'
 
 const Countries = () => {
     const [filteredCountries, setFilteredCountries] = useState([])

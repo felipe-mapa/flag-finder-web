@@ -1,8 +1,7 @@
 import React from 'react';
 
-const spinner = () => (
+const Spinner = () => (
     <div>
-
         <div className="loader"
             >Loading...
         </div>
@@ -10,4 +9,4 @@ const spinner = () => (
     </div>
 );
 
-export default spinner;
+export default Spinner;

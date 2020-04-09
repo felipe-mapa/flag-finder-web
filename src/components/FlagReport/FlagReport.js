@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import CSSTransition from 'react-transition-group/CSSTransition'
 
-import FormModal from './FormModal'
+import FormModal from '../FormModal/FormModal'
 
 const FlagReport = props => {
     const [visibility, setVisibility] = useState("FlagReport FlagReport__hidden")
