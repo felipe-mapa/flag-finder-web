@@ -1,5 +1,5 @@
-@import 'App';
 @import 'Sass/Colors';
+@import 'Sass/App';
 @import 'Sass/Headers';
 
 @import 'components/Spinner/Spinner';
@@ -8,9 +8,9 @@
 @import 'components/FormModal/FormModal';
 @import 'components/ReportButton/ReportButton';
 @import 'containers/Countries/Countries';
-@import 'routes/CountryPage/CountryPage';
+@import 'containers/CountryPage/CountryPage';
 @import 'components/ErrorMessage/ErrorMessage';
 @import 'components/InputTag/InputTag';
-@import 'routes/SearchContainer/SearchContainer';
+@import 'containers/SearchContainer/SearchContainer';
 @import 'components/TagList/TagList';
 @import 'components/Footer/Footer';
