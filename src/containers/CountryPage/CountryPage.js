@@ -11,6 +11,7 @@ import ReportButton from '../../components/ReportButton/ReportButton'
 import Footer from '../../components/Footer/Footer'
 
 const CountryPage = (props) => {
+    // SET VARIABLES
     let flagCapital = null
     let flagYear = null
     let flagContinent = null
@@ -19,12 +20,14 @@ const CountryPage = (props) => {
     let taggy = null
     let flagMeaning = null
     let flagTags = null
+
+    // SET STATE
     const [isLoading, setIsLoading] = useState(true)
 
-    // COUNTRY
+    // GET COUNTRY NAME
     const countryName = props.match.params.id
 
-    // SELECTORS
+    // GET SELECTORS
     const selectedCountry = useSelector(state => state.loadedFullCountry.find(c => c.slug === countryName))
     const allTags = useSelector(state => state.loadedTags)
     const allContinents = useSelector(state => state.loadedContinents)
@@ -34,7 +37,6 @@ const CountryPage = (props) => {
     useEffect(() => {
         loadCountry()
     }, [])
-    // LOAD ALL COUNTRY TOGETHER
     const loadCountry = useCallback(async () => {
         try {
             await dispatch(countriesActions.fetchCountry(countryName));
@@ -44,6 +46,7 @@ const CountryPage = (props) => {
         setIsLoading(false)
     }, []);
 
+    // SET PAGE CONTENT
     let pageContent = <Spinner />
     if (!isLoading) {
         // YEAR
@@ -125,6 +128,7 @@ const CountryPage = (props) => {
             )
         }
 
+        // SET FLAG COLORS
         const allFlagColorList = ["blue", "green", "red", "yellow", "black", "white"
             , "purple", "light blue", "maroon", "orange", "brown"]
 
@@ -138,6 +142,7 @@ const CountryPage = (props) => {
         flagColors.splice(flagColors.length - 1, 0, "and")
         const flagColorsTogether = flagColors.join(" ")
 
+        // UPDATE PAGE CONTENT
         pageContent = (
             <div>
                 <Helmet>

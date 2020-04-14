@@ -65,7 +65,7 @@ const Countries = () => {
         <CSSTransition key="blank5" timeout={100}><li className="countries__country countries__blank"></li></CSSTransition>
     )
 
-    //Change Header
+    // UPDATE HEADER
     useEffect(() => {
         if (!isLoading) {
             if (filteredCountries.length === 1) {
@@ -83,7 +83,7 @@ const Countries = () => {
     }, [filteredCountries, isLoading])
 
 
-    //Output
+    // DISPLAY OUTPUT
     let output
     if (filteredCountries.length > 0) {
         if (filteredCountries.length === 1) {

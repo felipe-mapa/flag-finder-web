@@ -44,6 +44,7 @@ const SearchComponent = () => {
         setNewTag(event.target.value)
     }
 
+    // SET IS LOADING
     useEffect(() => {
         if (countries.length > 0) {
             setIsLoaded(true)
@@ -130,6 +131,7 @@ const SearchComponent = () => {
         }
     }
 
+    // CAPITALIZE TAG
     const capitalize = (str) => {
         var splitStr = str.toLowerCase().split(' ');
         for (var i = 0; i < splitStr.length; i++) {
