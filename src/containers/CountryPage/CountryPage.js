@@ -155,9 +155,9 @@ const CountryPage = (props) => {
                             conty + " flag country," +
                             "flag country " + conty + "," +
                             selectedCountry.name + " flag color," +
-                            selectedCountry.name + " flag colour," +
+                            selectedCountry.name + " flag color," +
                             selectedCountry.name + " flag colors," +
-                            selectedCountry.name + " flag colours," +
+                            selectedCountry.name + " flag colors," +
                             "image for " + selectedCountry.name + " flag," +
                             selectedCountry.name + " flag images," +
                             selectedCountry.name + " flag age," +
