@@ -29,16 +29,16 @@ I have been always fascinated for flags, so for a university project I developed
 - It was also the first website which I used WordPress as the backend, being able to learn how it works and how to create a theme.
 - To be able to link React and WordPress I used [Create React WP Theme](https://github.com/devloco/create-react-wptheme/commit/61cab882028b8c2596beed9df2b44bcc1c0b869c), which is base on Create React App.
 
-- ### **Database**
+#### Database
 
 One of the reasons I used Wordpress (apart from learning something new) was because it has got a easy to use REST API. 
 I retrieved the data using Axios, and manipulated and managed it with Redux and Thunk.
 
-- ### **SEO**
+#### SEO
 
 To handle the SEO of over 200 pages in a single page app, I used [React Helmet](https://github.com/nfl/react-helmet) which would dynamically change the page meta data depending on the country selected using pre-defined variables.
 When a page is open it filter the country's name, colors and continent and use these variables to build the meta tags.
 
-- ### **Email**
+#### Email
 
 I decided to use a JS library to handle the email sending instead of coding it in PHP (as I have done in most of the past websites I've developed) or using WordPress plugins. The reason for that was because I wanted a JS solution to send email, so I could learn something new in case I need to use in the future.
